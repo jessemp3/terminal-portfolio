@@ -44,27 +44,37 @@ strong{
     white-space: pre;
 }
 
+
 .education > *, 
 .professional-experience > *,
 .projects > *,
 .skills > *,
-.achievements-and-certifications > *{
+.achievements-and-certifications > *,
+.languages > *{
     padding-bottom: .5rem;
 }
 
-.education-item, 
-.professional-experience-item {
+.education-item,
+.professional-experience-item,
+.professional-experience-item2
+{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
 }
-.education-item > *:nth-child(2n+2), 
-.professional-experience-item > *:nth-child(2n+2){
+
+
+.education-item > *:nth-child(2n+2),
+.professional-experience-item > *:nth-child(2n+2),
+.professional-experience-item2 > *:nth-child(2n+2){
     text-align: right;
 }
+
 .professional-experience-item > ul,
+.professional-experience-item2 > ul,
 .projects-item > ul,
 .skills > ul,
-.achievements-and-certifications > ul{
+.achievements-and-certifications > ul,
+.languages > ul{
     padding-left: 2rem;
     padding-top: .25rem;
 }

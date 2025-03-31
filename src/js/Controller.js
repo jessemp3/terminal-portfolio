@@ -53,8 +53,7 @@ export class Controller {
                 document.querySelector("#terminal").innerHTML = "";
                 break;
             case "exit":
-                new UniversalFunction().updateElement("div", "error",
-                    "Due to security reasons, you can't close this window using the 'exit' command.");
+                window.close();
                 break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;

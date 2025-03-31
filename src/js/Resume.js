@@ -32,8 +32,7 @@ export class Resume{
     }
 
     downloadResume(format){
-        if(format === "" || format === "pdf") this.downloadFile("curriculoJulia.pdf");
-        else if(format === "doc") this.downloadFile("curriculoJulia.docx");
+        if(format === "" || format === "pdf") this.downloadFile("KAIQUEALVES.pdf");   
         else{
             let errMsg = `resume: '${format}' is not a valid format.<br>type 'resume --help' for help.`;
             new UniversalFunction().updateElement("div", "error", errMsg);
@@ -53,41 +52,60 @@ export class Resume{
 
     help() {
         let outMsg = `resume: Displays or download my resume.<br>
-        usage: resume [option] [value]<br>
+        usage: resume [option]<br>
         options:<br>
-        --download [pdf(Default) | doc] downloads my resume in the given format.<br>
+        --download to download my resume in format .pdf .<br>
         --help shows this help message.<br>
         type 'resume' to display my resume.`;
         new UniversalFunction().updateElement("div", "output", outMsg);
     }
 
-    getHeader(){
+getHeader(){
         return `<div class="header">
-        <h1>Julia Reis</h1><hr>
+        <h1>Kaique Alves da Silva</h1><hr>
         <p>
-            <span><a href="tel:+55(61)981206088">+55(61)981206088</a> | </span>
-            <span><a href="mailto:juliamesquita267@gmail.com">juliamesquita267@gmail.com</a> | </span>
-            <span><a href="https://juli32bit.vercel.app/" target="_blank">CLI-Portfolio</a> | </span>
-            <span><a href="https://github.com/juli32bit" target="_blank">GitHub</a> | </span>
-            <span><a href="https://www.linkedin.com/in/juli32bit" target="_blank">LinkedIn</a> | </span>
-            <span><a href="https://leetcode.com/juli32bit" target="_blank">Leetcode</a></span>
+            <span>Nacionalidade: Brasileira | </span>
+            <span>Data de Nascimento: 25/11/2004 | </span>
+            <span>Centro - São Paulo/SP, 01050-020 | </span>
+            <span><a href="tel:+5511911054439">(11) 91105-4439</a> | </span>
+            <span><a href="mailto:kaiquedt21@gmail.com">kaiquedt21@gmail.com</a> | </span>
+            <span><a href="https://www.linkedin.com/in/kaique-alves" target="_blank">LinkedIn</a> | </span>
+            <span><a href="https://github.com/kaiquealves" target="_blank">GitHub</a></span>
         </p><hr>
         </div>`;
     }
 
+getMessage(){
+    return `<div class="objective">
+        <div>
+            <h2>OBJETIVO</h2><hr>
+        </div>
+        <p>Buscando posição que me permita aplicar e expandir conhecimentos em arquitetura de software, metodologias ágeis e múltiplas tecnologias modernas para criar produtos inovadores e de alta qualidade. Experiência com diversas stacks de desenvolvimento e comprometido com a entrega de soluções robustas e escaláveis.</p>
+    </div>`;
+}
+
+getLanguages(){
+       return ` <div class="languages">
+            <div>
+            <h2>IDIOMAS</h2><hr>
+            </div>  
+            <ul>
+                <li>Português - nativo</li>
+                <li>Inglês - Intermediário</li>
+             </ul>
+        </div>
+`
+}
+
     getEducation(){
         return `<div class="education">
             <div>
-                <h2>FORMAÇÃO</h2><hr>
+                <h2>FORMAÇÃO ACADÊMICA</h2><hr>
             </div>
             <div class="education-item">
-                <strong>uniCEUB</strong>  <strong>Brasília, Brasil</strong>
-                <p>Análise e desenvolvimento de sistemas</p>  <p>October 2024–hoje</p>
-                <p>Especializando : Cibersec, DevOps, Web Dev</p>
-            </div>
-            <div class="education-item">
-                <strong>Google Cybersecurity</strong> <strong>Online</strong>
-                <p>Certificado Foundations of Cybersecurity</p> <p>July 2024–hoje</p>
+                <strong>Universidade Anhaguera</strong>  <strong>São Paulo, Brasil</strong>
+                <p>Análise e Desenvolvimento de Sistemas – EAD</p>  <p>03/2024–atual</p>
+                <p>Carga horária total: 2000h +</p>
             </div>
         </div>`;
     }
@@ -95,23 +113,39 @@ export class Resume{
     getProfessionalExperience(){
         return `<div class="professional-experience">
             <div>
-                <h2>EXPERIÊNCIA</h2><hr>
+                <h2>EXPERIÊNCIA PROFISSIONAL</h2><hr>
             </div>
             <div class="professional-experience-item">
                 <strong>
-                     Voluntariado - uniCEUB
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7282835876009644033/" target="_blank">[LinkedIn]</a> 
+                     Esfiha Imigrantes
                     </strong> 
-                <strong>Brasília, Brasil</strong>
-                <p><strong>Web Freelancer</strong> </p> <p>2024-hoje</p>
+                <strong>São Paulo, Brasil</strong>
+                <p><strong>Atendimento ao cliente, administração de logística e administração de cupons fiscais</strong></p>
+                <p>09/12/2022–08/12/2024</p>
                 <ul>
-                    <li>Aula de informática para idosos</li>
-                    <li>Configuração de redes locais e residenciais</li>
-                    <li>Desenvolvimento de site para corretor imobiliário com otimização SEO</li>
-                    
+                    <li>Atendimento ao cliente, resolução de problemas</li>
+                    <li>Administração de logística via ifood/uber/lalamove</li>
+                    <li>Atualizações de software, administração de cupons fiscais</li>
                 </ul>
             </div>
-        </div>`;
+            <div class="professional-experience">
+                 <div class="professional-experience-item2">
+                <strong>
+                     Forte Regulações
+                    </strong> 
+                <strong>São Paulo, Brasil</strong>
+                <p><strong>Estágio em Analise da Dados</strong></p>
+                <p>27/01/2025–25/03/2025</p>
+                <ul>
+                    <li>Administração de Softwares internos</li>
+                    <li>Criação de macro e vba'a para automoção</li>
+                    <li>Utilização de Javascrit para automoções</li>
+                    <li>Administração de planilhas exel</li>
+                    <li>Power Bi</li>
+                </ul>
+            </div>
+            </div>
+`;
     }
 
     getProjects(){
@@ -120,23 +154,19 @@ export class Resume{
                 <h2>PROJETOS</h2><hr>
             </div>
             <div class="projects-item">
-                <strong>Terminal Portfolio | HTML, CSS, JavaScript | 
-                    <a href="https://github.com/juli32bit/Terminal-Portfolio" target="_blank">[GitHub]</a>
+                <strong>Demo Day - AgeOs | 
+                    <a href="https://github.com/kaiquealves/AgeOs" target="_blank">[GitHub]</a>
                 </strong>
                 <ul>                  
-                    <li>Criei esse <strong> Portfolio inspirado em terminal </strong> para demonstrar habilidades com <strong>desenvolvimento web, backend e cibersegurança.</strong>.</li>
-                    <li><strong>Armazenamento local</strong> para lista de comandos.</li> 
-                    <li>Used <strong>Git e GitHub</strong> para controle de versão</li>
-                    <li>Deploy no <strong>Vercel</strong>.</li>
+                    <li>Custom rom para telefones androids, que visa <strong>facilitar a navegação de pessoas idosas</strong> com segurança reforçada contra golpes</li>
                 </ul>
             </div>
             <div class="projects-item">
-                <strong>Página Bento | JavaScript, HTML, CSS | 
-                    <a href="https://juli32bit.vercel.app/" target="_blank">[GitHub]</a>
+                <strong>Buscador de CEP | PHP | 
+                    <a href="https://github.com/kaiquealves/BuscadorDeCep" target="_blank">[GitHub]</a>
                 </strong>
                 <ul>
-                    <li>Uma página de fácil acesso e que <strong>promove as redes do usuário</strong></li>
-                    <li>Demonstra as habilidades logo na <strong>primeira seção</strong></li>
+                    <li>BuscadorDeCep é uma biblioteca PHP para <strong>busca de CEPs</strong> (Códigos de Endereçamento Postal) no Brasil</li>
                 </ul>
             </div>
         </div>`;
@@ -145,14 +175,15 @@ export class Resume{
     getSkills(){
         return `<div class="skills">
             <div>
-                <h2>HABILIDADES TÉCNICAS</h2><hr>
+                <h2>CONHECIMENTOS TÉCNICOS</h2><hr>
             </div>
             <ul>
-                <li><strong>Linguagens :</strong>  C, HTML, CSS, Python(Basic), JavaScript(Basic)</li>
-                <li><strong>Frameworks :</strong> React</li>
-                <li><strong>Banco de dados :</strong> MySQL, Oracle Database</li>
-                <li><strong>Ferramentas :</strong> Git, GitHub </li>
-                <li><strong>Sistemas Operacionais :</strong> Windows, Linux</li>
+                <li><strong>UI/UX:</strong> Canva, Figma</li>
+                <li><strong>Front End:</strong> HTML, CSS, JavaScript, TypeScript, ReactJs, NextJs, Laravel</li>
+                <li><strong>Estilização:</strong> Sass, Bootstrap, Tailwind & Styled-components</li>
+                <li><strong>Back end:</strong> NodeJs, PHP, Jest (Testes)</li>
+                <li><strong>Banco de dados:</strong> MongoDb, MySql & PostgreSql</li>
+                <li><strong>Mobile:</strong> React-native</li>
             </ul>
         </div>`;
     }
@@ -160,28 +191,44 @@ export class Resume{
     getAchievementsAndCertifications(){
         return `<div class="achievements-and-certifications">
             <div>
-                <h2>CERTIFICAÇÕES</h2><hr>
+                <h2>CURSOS E CERTIFICAÇÕES</h2><hr>
             </div>
             <ul>
                 <li>
-                    Foundations of Cybersecurity,  Janeiro 2025.
-                    <a href="https://coursera.org/share/3fb478b35ecc5c7e47601a0d2f9a1a40" target="_blank">[Certificado]</a>
+                    <strong>Instituto Proa</strong> – 6/2024 a 12/2024
+                    <p>Desenvolvimento Web Java</p>
+                    <p>Conteúdo Técnico com Certificação Senac - Carga horária total: 440h</p>
                 </li>
                 <li>
-                   C1 English (Avançado, proficiente), Dezembro 2025.
-                    <a href="https://cert.efset.org/en/dyGAgA" target="_blank">[Certificado]</a>
+                    <strong>Onebitcode</strong> – 08/2023 a 02/2024
+                    <p>Desenvolvimento Full Stack em Javascript</p>
+                    <p>Carga horária total: 200h+</p>
+                </li>
+                <li>
+                    <strong>DIO</strong> – 11/2024 a 01/2025
+                    <p>PHP experience</p>
+                    <p>Carga horária total: 50h+</p>
+                </li>
+                <li>
+                    <strong>Cisco</strong> – 01/2025 a 01/2025
+                    <p>Introdução a cibersegurança</p>
+                </li>
+                <li>
+                    <strong>Solyd</strong> – 10/2024 a 01/2025
+                    <p>Hacking e pentester</p>
                 </li>
             </ul>
         </div>`;
     }
-
     toString(){
         return `${this.getHeader()}
+        ${this.getMessage()}
+        ${this.getLanguages()}
         ${this.getEducation()}
-        ${this.getProfessionalExperience()}
-        ${this.getProjects()}
-        ${this.getSkills()}
         ${this.getAchievementsAndCertifications()}
+        ${this.getProfessionalExperience()}
+        ${this.getSkills()}
+        ${this.getProjects()}
         `;
     }
     displayResume(){
