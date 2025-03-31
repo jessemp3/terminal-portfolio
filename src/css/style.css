@@ -19,6 +19,12 @@ main{
     padding: 1rem;
     scroll-behavior: smooth;
 }
+.criadora,
+.adaptador
+{
+    font-size: 0.4rem;
+}
+
 .version{
     font-size: clamp(8px, .9vw, 20px);
     font-weight: bolder;
