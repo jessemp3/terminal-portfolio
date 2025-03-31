@@ -1,4 +1,16 @@
 /* temas escuros / dark themes */
+.dark-cave {
+    --color-background: hsl(0, 0%, 0%);
+    --color-text: hsl(218, 13%, 88%);
+    --color-terminal-text: hsl(82, 100%, 37%);
+    --color-caret-Keyword: hsl(146, 60%, 56%);
+}
+.dark-night {
+    --color-background: hsl(240, 14%, 9%);
+    --color-text: hsl(218, 13%, 88%);
+    --color-terminal-text: hsl(45, 100%, 50%);
+    --color-caret-Keyword: hsl(234, 100%, 72%);
+}
 .dark-forest {
     --color-background: hsl(220, 13%, 18%);
     --color-text: hsl(218, 13%, 88%);
@@ -23,18 +35,7 @@
     --color-terminal-text: hsl(199, 100%, 59%);
     --color-caret-Keyword: hsl(185, 100%, 64%);
 }
-.dark-night {
-    --color-background: hsl(240, 14%, 9%);
-    --color-text: hsl(218, 13%, 88%);
-    --color-terminal-text: hsl(45, 100%, 50%);
-    --color-caret-Keyword: hsl(234, 100%, 72%);
-}
-.dark-cave {
-    --color-background: hsl(0, 0%, 0%);
-    --color-text: hsl(218, 13%, 88%);
-    --color-terminal-text: hsl(82, 100%, 37%);
-    --color-caret-Keyword: hsl(146, 60%, 56%);
-}
+
 .dark-sea{
     --color-background: hsl(0, 0%, 10%);
     --color-text: hsl(0, 0%, 90%);

@@ -4,7 +4,7 @@ import { History } from "./History.js";
 // set theme
 let isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 document.querySelector("body")
-.setAttribute("class", isDark ? "dark-forest" : "light-vanilla");
+.setAttribute("class", isDark ? "dark-cave" : "light-vanilla");
 
 // get terminal element
 const terminal = document.getElementById("terminal");
@@ -20,7 +20,7 @@ function addCommand() {
     <div>
       <span class="os">╭─ </span>
       <span class="user">guest@</span>
-      <span class="host">juli32bit-services.com</span>
+      <span class="host">jessemp3-services.com</span>
       <span class="path">~</span>
     </div>
     <div>

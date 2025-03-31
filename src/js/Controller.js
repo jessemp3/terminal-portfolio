@@ -5,6 +5,8 @@ import { History } from "./History.js";
 import { Resume } from "./Resume.js";
 import { Connect } from "./Connect.js";
 import { Contact } from "./Contact.js";
+import { Projects } from "./Project.js";
+import { Skills } from "./Skills.js";
 import { UniversalFunction } from "./UniversalFunction.js";
 
 export class Controller {
@@ -22,10 +24,10 @@ export class Controller {
             case "about":
                 new About().updateDOM();
                 break;
-            case "whoami":
-                new UniversalFunction().updateElement("div", "output",
-                    "Ainda tô tentando descobrir...");
-                break;
+            // case "whoami":
+            //     new UniversalFunction().updateElement("div", "output",
+            //         "Seu futuro resolvedor de bugs ou seu futuro Pentester</br> ou apenas eu mesmo kk");
+            //     break;
             case "theme":
                 new Theme(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
                 break;
@@ -41,14 +43,18 @@ export class Controller {
             case "contact":
                 new Contact().updateDOM();
                 break;
+            case "projects":
+                new Projects().updateDOM();
+                break;
+            case "skills":
+                new Skills().updateDOM();
+                break;
             case "clear":
                 document.querySelector("#terminal").innerHTML = "";
                 break;
             case "exit":
                 new UniversalFunction().updateElement("div", "error",
                     "Due to security reasons, you can't close this window using the 'exit' command.");
-                // window.open(location, '_self').close();
-                // window.close();
                 break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
